@@ -39,49 +39,44 @@ class _SfDataGridDemoState extends State<SfDataGridDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter SfDataGrid')),
-      body: Center(
-        child: SizedBox(
-          width: 500,
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            controller: dataGridController,
-            selectionMode: SelectionMode.multiple,
-            columns: [
-              GridColumn(
-                columnName: 'id',
-                label: Container(
-                  padding: const EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: const Text('ID'),
-                ),
-              ),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
-                  padding: const EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: const Text('Name'),
-                ),
-              ),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
-                  padding: const EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: const Text('Designation'),
-                ),
-              ),
-              GridColumn(
-                columnName: 'button',
-                label: Container(
-                  padding: const EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: const Text('Details '),
-                ),
-              ),
-            ],
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        controller: dataGridController,
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: const EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: const Text('ID'),
+            ),
           ),
-        ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: const EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: const Text('Name'),
+            ),
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: const EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: const Text('Designation'),
+            ),
+          ),
+          GridColumn(
+            columnName: 'button',
+            label: Container(
+              padding: const EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: const Text('Details '),
+            ),
+          ),
+        ],
       ),
     );
   }
